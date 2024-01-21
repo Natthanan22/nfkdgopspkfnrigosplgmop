@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss You!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #add8e6; /* Light Blue */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #surprise-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #c1ffc1; /* Light Green */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2d577e; 
+        }
+
+        p {
+            color: #000;
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #000080; /* Navy Blue */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #000066; /* Slightly Darker Blue */
+        }
+
+            #duration-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="surprise-container">
+        <h1>คิดถึงพี่นะ</h1>
+        <p>จากใจแฟนคนชื่อภีม</p>
+        <p>เฟินไม่รู้ว่าจะเลิกคิดถึงคนในรูปข้างล่างยังไง</p>
+        <img src="file:///E:/peem.png" alt="Miss You Image">
+        <p>เฟินก็เลยหาอะไรทำเพื่อลืมพี่ไง (ไม่ลืมอ่ะ ใครจะลืมลง)</p>
+        <p>ก็ไม่ได้อยากให้กลับมาเร็วๆหรอกนะถึงทำอันนี้ขึ้นมา (อย่าถามเรื่องรูปนะ)</p>
+        <div id="calculator-container">
+            <h1>ข้างล่างคือเครื่องคำนวณวันสุดมหัศจรรย์</h1>
+            <p>มันเป็นเวลาที่พี่ไม่ได้มาคุยกับเฟิน จำไว้นะโดนเฟินแค้นแน่</p>
+            <p id="result"></p>
+            <button onclick="calculateDuration()">กดอันนี้ก่อนนะ กดเล้ย</button>
+    
+            <script>
+                function calculateDuration() {
+                    var startDate = new Date('2024-01-19');
+                    var currentDate = new Date();
+                    var timeDifference = currentDate - startDate;
+    
+                    var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    
+                    var result = "ผ่านมาแล้ว: " + days + " วัน, " + hours + " ชั่วโมง, " + minutes + " นาที, " + seconds + " วินาที";
+    
+                    document.getElementById("result").innerHTML = result;
+                }
+            </script>
+        </div>
+        <a href="file:///C:/Users/ADV/Desktop/Ppeem.html">กดเพื่ออ่านเรียงความ</a>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
